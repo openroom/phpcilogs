@@ -27,11 +27,11 @@ executed statement CREATE TABLE users  (
 
 
 executed statement INSERT INTO users  (username, password, email, is_active, is_administrator) 
-VALUES ('admin', '$2y$10$8bdTpc7LuqJeljzo/ZX02OGvH1luYoQbhNSr/yND4x54HKRhGPrYi', 'hikingfan@gmail.com', TRUE, TRUE);<br />
+VALUES ('admin', '$2y$10$OfaEwPd6UH5OCZoDJotqp.IFb62YCHt7QSUoyagutF8Ina9tPo0XW', 'hikingfan@gmail.com', TRUE, TRUE);<br />
 
 
 executed statement INSERT INTO users  (username, password, email, is_active, is_reporter) 
-VALUES ('reporter', '$2y$10$8bdTpc7LuqJeljzo/ZX02OGvH1luYoQbhNSr/yND4x54HKRhGPrYi', 'hikingfan+reporter@gmail.com', TRUE, TRUE);<br />
+VALUES ('reporter', '$2y$10$OfaEwPd6UH5OCZoDJotqp.IFb62YCHt7QSUoyagutF8Ina9tPo0XW', 'hikingfan+reporter@gmail.com', TRUE, TRUE);<br />
 
 
 .executed statement DROP TABLE IF EXISTS settings CASCADE<br />
@@ -207,13 +207,13 @@ executed statement INSERT INTO optionalfields
 
 ...                                                   15 / 15 (100%)
 
-Time: 2.47 seconds, Memory: 12.00MB
+Time: 2.42 seconds, Memory: 12.00MB
 
 OK (15 tests, 21 assertions)
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-08-29 19:46:26        [0m
+[1;37;40m  2017-08-29 19:50:40        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
 [37;41m  Classes: 27.38% (279/1019) [0m
@@ -254,215 +254,3 @@ OK (15 tests, 21 assertions)
   [30;43mMethods:  86.96% (20/23)[0m   [30;42mLines:  92.11% ( 35/ 38)[0m
 \model::UserSQLRepository
   [30;43mMethods:  80.00% ( 4/ 5)[0m   [30;43mLines:  73.02% ( 46/ 63)[0m
-PHPUnit 5.0.10 by Sebastian Bergmann and contributors.
-
-....executed statement DROP TABLE IF EXISTS duck CASCADE<br />
-
-
-executed statement create table duck (id SERIAL PRIMARY KEY,username varchar(50) NOT NULL UNIQUE)<br />
-
-
-executed statement INSERT INTO duck (username) VALUES ('admin')<br />
-
-
-.executed statement DROP TABLE IF EXISTS users CASCADE<br />
-
-
-executed statement CREATE TABLE users  (
-  id               SERIAL PRIMARY KEY,
-  username         TEXT                        NOT NULL UNIQUE,
-  display_name     TEXT,
-  password         TEXT                        NOT NULL,
-  email            TEXT                        NOT NULL,
-  last_login       TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT (now()),
-  is_active        BOOLEAN                     NOT NULL DEFAULT FALSE,
-  is_administrator BOOLEAN                     NOT NULL DEFAULT FALSE,
-  is_reporter      BOOLEAN                     NOT NULL DEFAULT FALSE,
-  is_banned        BOOLEAN                     NOT NULL DEFAULT FALSE
-);<br />
-
-
-executed statement INSERT INTO users  (username, password, email, is_active, is_administrator) 
-VALUES ('admin', '$2y$10$VoRLCcPeYBgtxGxJLXUGTOIJdkVU3YtG2AEb82FdR0h6Grwl2w.ta', 'hikingfan@gmail.com', TRUE, TRUE);<br />
-
-
-executed statement INSERT INTO users  (username, password, email, is_active, is_reporter) 
-VALUES ('reporter', '$2y$10$VoRLCcPeYBgtxGxJLXUGTOIJdkVU3YtG2AEb82FdR0h6Grwl2w.ta', 'hikingfan+reporter@gmail.com', TRUE, TRUE);<br />
-
-
-.executed statement DROP TABLE IF EXISTS settings CASCADE<br />
-
-
-executed statement CREATE TABLE settings  (
-  id    SERIAL PRIMARY KEY,
-  name  TEXT UNIQUE,
-  value TEXT
-);<br />
-
-
-executed statement INSERT INTO settings  (name, value) VALUES 
-('login_method', 'normal'),
-('systemid', '80zhh73n5'),
-('theme', 'default'),
-('instance_name', 'Openroom Demo'),
-('policies', 'Rosenthal Library usually has several rooms available to students for group study on a ' ||
-               'first-come, first-serve basis. These rooms are available to currently registered Queens College ' ||
-               'students only.
-
-Immediate use of a Group Study Room is made by presenting your valid Queens ' ||
-               'College ID at the Circulation Desk (located on Level 3 of the Library). If available, a room will ' ||
-               'be assigned to you for one 2-hour time block. If the room is in use a hold may be placed to secure ' ||
-               'the next available time slot. Room use, like book use, is assigned to your record in our automated ' ||
-               'circulation system. When a room is assigned to you, you will be handed a wooden block upon which ' ||
-               'the room number and policies governing Group Study Rooms is adhered. Upon completing your use of ' ||
-               'the room, the wooden block is to be returned to the Circulation Desk and the assignment of the room ' ||
-               'to your record will be released.
-
-Should you wish to extend the use of the room you are ' ||
-               'required to return to the Circulation desk with your ID and the wooden block at the end of the 2 ' ||
-               'hours. The room will then be reassigned to you provided there are no other users awaiting use of ' ||
-               'the room.'),
-('time_format', 'g:i a');<br />
-
-
-.executed statement DROP TABLE IF EXISTS groups CASCADE<br />
-
-
-executed statement create table groups (id SERIAL PRIMARY KEY, name TEXT NOT NULL)<br />
-
-
-executed statement INSERT INTO groups (name) VALUES ('apple')<br />
-
-
-executed statement INSERT INTO groups (name) VALUES ('ball')<br />
-
-
-executed statement INSERT INTO groups (name) VALUES ('cat')<br />
-
-
-.executed statement DROP TABLE IF EXISTS rooms CASCADE<br />
-
-
-executed statement create table rooms (
-  id          SERIAL PRIMARY KEY,
-  name        TEXT,
-  position    INTEGER,
-  capacity    INTEGER,
-  groupid     INTEGER REFERENCES Groups (id),
-  description TEXT
-);<br />
-
-
-executed statement INSERT INTO rooms (name, position, capacity, groupid, description)
-VALUES ('방 101', 1, 8, 1, '이것은 시험이다.')<br />
-
-
-.executed statement DROP TABLE IF EXISTS reservations CASCADE<br />
-
-
-executed statement create table reservations (
-  id                   SERIAL PRIMARY KEY,
-  start_time           TIMESTAMP NOT NULL,
-  end_time             TIMESTAMP NOT NULL,
-  room_id              INTEGER   NOT NULL REFERENCES Rooms (id),
-  user_id              INTEGER   NOT NULL REFERENCES Users (id),
-  number_in_group      INTEGER   NOT NULL DEFAULT 1,
-  time_of_request      TIMESTAMP NOT NULL DEFAULT (now()),
-  time_of_cancellation TIMESTAMP          DEFAULT NULL
-);<br />
-
-
-executed statement INSERT INTO reservations (start_time, end_time, room_id, user_id) 
-VALUES ('2017-03-26 11:30:00.000000', '2017-03-26 11:55:00.000000', 1, 1);<br />
-
-
-.executed statement DROP TABLE IF EXISTS hours CASCADE<br />
-
-
-executed statement create table hours (
-  id          SERIAL PRIMARY KEY,
-  room_id     INTEGER   NOT NULL REFERENCES Rooms (id),
-  day_of_week SMALLINT  NOT NULL,
-  start_time  TIMESTAMP NOT NULL,
-  end_time    TIMESTAMP NOT NULL
-);<br />
-
-
-executed statement INSERT INTO hours (room_id, day_of_week, start_time, end_time) VALUES 
-  (1, 1, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, 2, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, 3, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, 4, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, 5, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, 6, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, 7, '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000');<br />
-
-
-.executed statement DROP TABLE IF EXISTS specialhours CASCADE<br />
-
-
-executed statement create table specialhours (
-  id         SERIAL PRIMARY KEY,
-  room_id    INTEGER   NOT NULL REFERENCES Rooms (id),
-  from_range TIMESTAMP NOT NULL,
-  to_range   TIMESTAMP NOT NULL,
-  start_time TIMESTAMP NOT NULL,
-  end_time   TIMESTAMP NOT NULL
-);<br />
-
-
-executed statement INSERT INTO specialhours (room_id, from_range, to_range, start_time, end_time) VALUES 
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000'),
-  (1, '2016-10-10 04:00:00', '2016-10-10 04:00:00', '2017-03-26 11:30:00.000000', '2017-03-26 13:30:00.000000');<br />
-
-
-.executed statement DROP TABLE IF EXISTS optionalfields CASCADE<br />
-
-
-executed statement create table optionalfields (
-  id          SERIAL PRIMARY KEY,
-  name        TEXT    NOT NULL,
-  form_name   TEXT    NOT NULL,
-  type        TEXT    NOT NULL,
-  choices     JSON    NOT NULL,
-  position    INTEGER NOT NULL,
-  question    TEXT    NOT NULL,
-  is_private  BOOLEAN NOT NULL DEFAULT FALSE,
-  is_required BOOLEAN NOT NULL DEFAULT FALSE
-);<br />
-
-
-executed statement INSERT INTO optionalfields 
-  (name, form_name, type, choices, position, question, is_private, is_required) 
-  VALUES
-  ('campus affiliation', 'campus affiliation form', 1, '{
-    "0": "Undergraduate",
-    "1": "Graduate",
-    "2": "Faculty / Staff"
-  }', 1,'What is your Campus Affiliation?', FALSE, TRUE
-  );<br />
-
-
-executed statement INSERT INTO optionalfields
-    (name, form_name, type, choices, position, question, is_private, is_required) VALUES
-    ('random question name', 'random question form name', 1, '{
-    "0": "蘇步青",
-    "1": "復旦大學",
-    "2": "上海浦",
-    "3": "也係世界跟到新加坡同香港後面嗰世界第三大貨櫃港",
-    "4": "Cómo estás hoy?"
-  }', 1,
-   '"¿Cuál es su afiliación en el campus ?"', FALSE, TRUE
-  );<br />
-
-
-...                                                   15 / 15 (100%)
-
-Time: 2.45 seconds, Memory: 12.00MB
-
-OK (15 tests, 21 assertions)
