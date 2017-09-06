@@ -27,11 +27,11 @@ executed statement CREATE TABLE users  (
 
 
 executed statement INSERT INTO users  (username, password, email, is_active, is_administrator) 
-VALUES ('admin', '$2y$10$Ys6SQGhgr9o6hLOEc8Xahu3sFanNIRW/Wpt4MKCGNY3CUFwqG8z4e', 'hikingfan@gmail.com', TRUE, TRUE);<br />
+VALUES ('admin', '$2y$10$k6sp1haVx08R1JEbCuiEB.N3kODG/op7Mo/8Ewq5aLSiMqMDjyWzK', 'hikingfan@gmail.com', TRUE, TRUE);<br />
 
 
 executed statement INSERT INTO users  (username, password, email, is_active, is_reporter) 
-VALUES ('reporter', '$2y$10$Ys6SQGhgr9o6hLOEc8Xahu3sFanNIRW/Wpt4MKCGNY3CUFwqG8z4e', 'hikingfan+reporter@gmail.com', TRUE, TRUE);<br />
+VALUES ('reporter', '$2y$10$k6sp1haVx08R1JEbCuiEB.N3kODG/op7Mo/8Ewq5aLSiMqMDjyWzK', 'hikingfan+reporter@gmail.com', TRUE, TRUE);<br />
 
 
 .executed statement DROP TABLE IF EXISTS settings CASCADE<br />
@@ -207,13 +207,13 @@ executed statement INSERT INTO optionalfields
 
 ...                                                   15 / 15 (100%)
 
-Time: 3.77 seconds, Memory: 12.00MB
+Time: 3.06 seconds, Memory: 12.00MB
 
 OK (15 tests, 21 assertions)
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-06 11:35:44        [0m
+[1;37;40m  2017-09-06 19:15:07        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
 [37;41m  Classes: 27.38% (279/1019) [0m
