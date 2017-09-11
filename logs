@@ -1,32 +1,19 @@
 PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
-..F...                                                              6 / 6 (100%)
+......                                                              6 / 6 (100%)
 
-Time: 2.27 seconds, Memory: 12.00MB
+Time: 2.23 seconds, Memory: 12.00MB
 
-There was 1 failure:
-
-1) SettingTest::testAddSetting
-Failed asserting that two strings are equal.
---- Expected
-+++ Actual
-@@ @@
--'Rosenthal Library at Queens Collegete'
-+'Rosenthal Library at Queens College'
-
-/home/khada/src/phpci/Tests/SettingTest.php:37
-
-FAILURES!
-Tests: 6, Assertions: 20, Failures: 1.
+OK (6 tests, 20 assertions)
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-11 01:15:52        [0m
+[1;37;40m  2017-09-11 01:19:24        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.29% (2/700)    [0m
-[37;41m  Methods:  1.88% (75/3986)  [0m
-[37;41m  Lines:    1.43% (519/36343)[0m
+[37;41m  Classes:  0.14% (1/700)    [0m
+[37;41m  Methods:  1.38% (55/3986)  [0m
+[37;41m  Lines:    1.08% (396/36506)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
@@ -34,18 +21,14 @@ Tests: 6, Assertions: 20, Failures: 1.
   [37;41mMethods:   0.00% ( 0/21)[0m   [37;41mLines:  18.46% ( 24/130)[0m
 \PHPUnit\Framework::Assert
   [37;41mMethods:   4.52% ( 7/155)[0m   [37;41mLines:   2.05% ( 18/877)[0m
-\PHPUnit\Framework::Exception
-  [37;41mMethods:  25.00% ( 1/ 4)[0m   [37;41mLines:  45.45% (  5/ 11)[0m
-\PHPUnit\Framework::ExpectationFailedException
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [30;43mLines:  75.00% (  3/  4)[0m
 \PHPUnit\Framework::TestCase
-  [37;41mMethods:   7.14% ( 8/112)[0m   [37;41mLines:  16.16% (117/724)[0m
+  [37;41mMethods:   6.25% ( 7/112)[0m   [37;41mLines:  14.09% (102/724)[0m
 \PHPUnit\Framework::TestResult
-  [37;41mMethods:   0.00% ( 0/60)[0m   [37;41mLines:   9.82% ( 39/397)[0m
+  [37;41mMethods:   0.00% ( 0/60)[0m   [37;41mLines:   7.81% ( 31/397)[0m
 \PHPUnit\Framework\Constraint::Constraint
   [37;41mMethods:  28.57% ( 2/ 7)[0m   [37;41mLines:  36.00% (  9/ 25)[0m
 \PHPUnit\Framework\Constraint::IsEqual
-  [37;41mMethods:   0.00% ( 0/ 3)[0m   [30;43mLines:  57.14% ( 28/ 49)[0m
+  [37;41mMethods:   0.00% ( 0/ 3)[0m   [37;41mLines:  26.53% ( 13/ 49)[0m
 \PHPUnit\Framework\Constraint::IsFalse
   [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  50.00% (  1/  2)[0m
 \PHPUnit\Framework\Constraint::IsTrue
@@ -54,36 +37,6 @@ Tests: 6, Assertions: 20, Failures: 1.
   [37;41mMethods:   3.23% ( 1/31)[0m   [37;41mLines:  17.61% ( 75/426)[0m
 \SebastianBergmann\CodeCoverage::CodeCoverage
   [37;41mMethods:   0.00% ( 0/38)[0m   [37;41mLines:   0.96% (  4/416)[0m
-\SebastianBergmann\Comparator::ArrayComparator
-  [37;41mMethods:  33.33% ( 1/ 3)[0m   [37;41mLines:   1.72% (  1/ 58)[0m
-\SebastianBergmann\Comparator::Comparator
-  [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  4/  4)[0m
-\SebastianBergmann\Comparator::ComparisonFailure
-  [37;41mMethods:  14.29% ( 1/ 7)[0m   [37;41mLines:  40.00% (  6/ 15)[0m
-\SebastianBergmann\Comparator::DOMNodeComparator
-  [37;41mMethods:  33.33% ( 1/ 3)[0m   [37;41mLines:   3.33% (  1/ 30)[0m
-\SebastianBergmann\Comparator::DateTimeComparator
-  [37;41mMethods:  33.33% ( 1/ 3)[0m   [37;41mLines:  11.76% (  2/ 17)[0m
-\SebastianBergmann\Comparator::DoubleComparator
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  20.00% (  1/  5)[0m
-\SebastianBergmann\Comparator::ExceptionComparator
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  12.50% (  1/  8)[0m
-\SebastianBergmann\Comparator::Factory
-  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  81.48% ( 22/ 27)[0m
-\SebastianBergmann\Comparator::MockObjectComparator
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  25.00% (  1/  4)[0m
-\SebastianBergmann\Comparator::NumericComparator
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  15.79% (  3/ 19)[0m
-\SebastianBergmann\Comparator::ObjectComparator
-  [37;41mMethods:  33.33% ( 1/ 3)[0m   [37;41mLines:   2.94% (  1/ 34)[0m
-\SebastianBergmann\Comparator::ResourceComparator
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  12.50% (  1/  8)[0m
-\SebastianBergmann\Comparator::ScalarComparator
-  [37;41mMethods:   0.00% ( 0/ 2)[0m   [30;43mLines:  56.25% ( 18/ 32)[0m
-\SebastianBergmann\Comparator::SplObjectStorageComparator
-  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:   5.00% (  1/ 20)[0m
-\SebastianBergmann\Exporter::Exporter
-  [37;41mMethods:  20.00% ( 1/ 5)[0m   [37;41mLines:  12.50% ( 14/112)[0m
 \model::Setting
   [30;43mMethods:  87.50% ( 7/ 8)[0m   [30;43mLines:  66.67% ( 10/ 15)[0m
 \model::SettingRepository
