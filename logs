@@ -2,7 +2,7 @@ PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
 W...                                                                4 / 4 (100%)
 
-Time: 2.19 seconds, Memory: 12.00MB
+Time: 2.17 seconds, Memory: 12.00MB
 
 There was 1 warning:
 
@@ -14,7 +14,7 @@ Tests: 4, Assertions: 17, Warnings: 1.
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-11 00:25:09        [0m
+[1;37;40m  2017-09-11 00:25:51        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
 [37;41m  Classes:  0.00% (0/699)    [0m
