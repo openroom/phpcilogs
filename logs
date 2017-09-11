@@ -1,25 +1,19 @@
 PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
-W...                                                                4 / 4 (100%)
+.....                                                               5 / 5 (100%)
 
-Time: 2.17 seconds, Memory: 12.00MB
+Time: 2.25 seconds, Memory: 12.00MB
 
-There was 1 warning:
-
-1) Warning
-No tests found in class "SettingRepositoryTest".
-
-WARNINGS!
-Tests: 4, Assertions: 17, Warnings: 1.
+OK (5 tests, 19 assertions)
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-11 00:25:51        [0m
+[1;37;40m  2017-09-11 01:04:13        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.00% (0/699)    [0m
-[37;41m  Methods:  1.13% (45/3983)  [0m
-[37;41m  Lines:    1.00% (364/36465)[0m
+[37;41m  Classes:  0.14% (1/700)    [0m
+[37;41m  Methods:  1.35% (54/3986)  [0m
+[37;41m  Lines:    1.08% (395/36509)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
@@ -43,6 +37,10 @@ Tests: 4, Assertions: 17, Warnings: 1.
   [37;41mMethods:   3.23% ( 1/31)[0m   [37;41mLines:  17.61% ( 75/426)[0m
 \SebastianBergmann\CodeCoverage::CodeCoverage
   [37;41mMethods:   0.00% ( 0/38)[0m   [37;41mLines:   0.96% (  4/416)[0m
+\model::Setting
+  [30;43mMethods:  75.00% ( 6/ 8)[0m   [37;41mLines:  50.00% (  9/ 18)[0m
+\model::SettingRepository
+  [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 20/ 20)[0m
 \model::User
   [30;43mMethods:  86.96% (20/23)[0m   [30;42mLines:  92.11% ( 35/ 38)[0m
 \model::UserSQLRepository
