@@ -2,18 +2,18 @@ PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
 ......                                                              6 / 6 (100%)
 
-Time: 2.29 seconds, Memory: 12.00MB
+Time: 3.03 seconds, Memory: 12.00MB
 
 OK (6 tests, 20 assertions)
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-11 01:32:43        [0m
+[1;37;40m  2017-09-13 13:54:27        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.14% (1/700)    [0m
-[37;41m  Methods:  1.38% (55/3986)  [0m
-[37;41m  Lines:    1.08% (396/36506)[0m
+[37;41m  Classes:  0.14% (1/699)    [0m
+[37;41m  Methods:  1.38% (55/3981)  [0m
+[37;41m  Lines:    1.09% (396/36477)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
