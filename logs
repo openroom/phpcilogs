@@ -16,29 +16,22 @@ LINE 1: INSERT INTO users (username, display_name, password, email) ...
 
 ERRORS!
 Tests: 6, Assertions: 18, Errors: 1.
-LSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "pg_type_typname_nsp_index"
-DETAIL:  Key (typname, typnamespace)=(users_id_seq, 2200) already exists.
-
-/home/khada/src/phpci/Tests/UserTest.php:28
-
-ERRORS!
-Tests: 6, Assertions: 11, Errors: 2.
 
 
 [1;37;40mCode Coverage Report:        [0m
 [1;37;40m  2017-09-22 04:21:06        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.14% (1/699)    [0m
-[37;41m  Methods:  1.18% (47/3981)  [0m
-[37;41m  Lines:    1.05% (382/36445)[0m
+[37;41m  Classes:  0.14% (1/700)    [0m
+[37;41m  Methods:  1.35% (54/3996)  [0m
+[37;41m  Lines:    0.92% (390/42445)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
 \Composer\Autoload::ClassLoader
   [37;41mMethods:   0.00% ( 0/21)[0m   [37;41mLines:  18.46% ( 24/130)[0m
 \PHPUnit\Framework::Assert
-  [37;41mMethods:   3.23% ( 5/155)[0m   [37;41mLines:   1.71% ( 15/877)[0m
+  [37;41mMethods:   4.52% ( 7/155)[0m   [37;41mLines:   2.05% ( 18/877)[0m
 \PHPUnit\Framework::TestCase
   [37;41mMethods:   6.25% ( 7/112)[0m   [37;41mLines:  14.09% (102/724)[0m
 \PHPUnit\Framework::TestResult
@@ -47,6 +40,8 @@ Tests: 6, Assertions: 11, Errors: 2.
   [37;41mMethods:  28.57% ( 2/ 7)[0m   [37;41mLines:  36.00% (  9/ 25)[0m
 \PHPUnit\Framework\Constraint::IsEqual
   [37;41mMethods:   0.00% ( 0/ 3)[0m   [37;41mLines:  26.53% ( 13/ 49)[0m
+\PHPUnit\Framework\Constraint::IsFalse
+  [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  50.00% (  1/  2)[0m
 \PHPUnit\Framework\Constraint::IsTrue
   [37;41mMethods:  50.00% ( 1/ 2)[0m   [37;41mLines:  50.00% (  1/  2)[0m
 \PHPUnit\Util::Test
@@ -58,6 +53,9 @@ Tests: 6, Assertions: 11, Errors: 2.
 \model::SettingRepository
   [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 20/ 20)[0m
 \model::User
-  [30;43mMethods:  69.57% (16/23)[0m   [30;43mLines:  81.58% ( 31/ 38)[0m
+  [30;43mMethods:  86.96% (20/23)[0m   [30;42mLines:  92.11% ( 35/ 38)[0m
+\model::UserSQLRepository
+  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  63.49% ( 40/ 63)[0m
+s:  69.57% (16/23)[0m   [30;43mLines:  81.58% ( 31/ 38)[0m
 \model::UserSQLRepository
   [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  63.49% ( 40/ 63)[0m
