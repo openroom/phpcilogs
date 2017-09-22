@@ -50,18 +50,26 @@ Tests: 6, Assertions: 17, Errors: 4.
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
+\Co
+
+[1;37;40mCode Coverage Report:        [0m
+[1;37;40m  2017-09-22 04:17:06        [0m
+[1;37;40m                             [0m
+[1;37;40m Summary:                    [0m
+[37;41m  Classes:  0.00% (0/700)    [0m
+[37;41m  Methods:  0.95% (38/3996)  [0m
+[37;41m  Lines:    0.69% (292/42465)[0m
+
+@PHP::PHP_Timer
+  [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
 \Composer\Autoload::ClassLoader
-  [37;41mMethods:   0.00% ( 0/21)[0m   [37;41mLines:  18.46% ( 24/130)[0m
+  [37;41mMethods:   0.00% ( 0/21)[0m   [37;41mLines:   3.85% (  5/130)[0m
 \PHPUnit\Framework::Assert
   [37;41mMethods:   4.52% ( 7/155)[0m   [37;41mLines:   2.05% ( 18/877)[0m
-\PHPUnit\Framework::Exception
-  [37;41mMethods:  25.00% ( 1/ 4)[0m   [37;41mLines:  45.45% (  5/ 11)[0m
-\PHPUnit\Framework::ExceptionWrapper
-  [37;41mMethods:   0.00% ( 0/ 4)[0m   [37;41mLines:  50.00% (  9/ 18)[0m
 \PHPUnit\Framework::TestCase
-  [37;41mMethods:   7.14% ( 8/112)[0m   [37;41mLines:  14.92% (108/724)[0m
+  [37;41mMethods:   6.25% ( 7/112)[0m   [37;41mLines:  14.09% (102/724)[0m
 \PHPUnit\Framework::TestResult
-  [37;41mMethods:   0.00% ( 0/60)[0m   [37;41mLines:  10.08% ( 40/397)[0m
+  [37;41mMethods:   0.00% ( 0/60)[0m   [37;41mLines:   7.81% ( 31/397)[0m
 \PHPUnit\Framework\Constraint::Constraint
   [37;41mMethods:  28.57% ( 2/ 7)[0m   [37;41mLines:  36.00% (  9/ 25)[0m
 \PHPUnit\Framework\Constraint::IsEqual
@@ -75,6 +83,4 @@ Tests: 6, Assertions: 17, Errors: 4.
 \SebastianBergmann\CodeCoverage::CodeCoverage
   [37;41mMethods:   0.00% ( 0/38)[0m   [37;41mLines:   0.96% (  4/416)[0m
 \model::User
-  [30;43mMethods:  86.96% (20/23)[0m   [30;42mLines:  92.11% ( 35/ 38)[0m
-\model::UserSQLRepository
-  [30;43mMethods:  80.00% ( 4/ 5)[0m   [30;43mLines:  73.02% ( 46/ 63)[0m
+  [30;43mMethods:  73.91% (17/23)[0m   [30;43mLines:  73.68% ( 28/ 38)[0m
