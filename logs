@@ -1,69 +1,35 @@
 PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
-EEEE..                                                              6 / 6 (100%)
+...E..                                                              6 / 6 (100%)
 
-Time: 4.37 seconds, Memory: 12.00MB
+Time: 4.17 seconds, Memory: 12.00MB
 
-There were 4 errors:
+There was 1 error:
 
-1) SettingRepositoryTest::testAddSetting
-PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "settings" does not exist
-LINE 1: SELECT value FROM settings WHERE name = $1
-                          ^
+1) UserSQLRepositoryTest::testAddAdminUser
+PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "users" does not exist
+LINE 1: INSERT INTO users (username, display_name, password, email) ...
+                    ^
 
-/home/khada/src/phpci/model/SettingRepository.php:9
-/home/khada/src/phpci/Tests/SettingRepositoryTest.php:37
-
-2) SettingRepositoryTest::testUpdateSetting
-PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "settings" does not exist
-LINE 1: UPDATE settings SET value = $1 WHERE name = $2
-               ^
-
-/home/khada/src/phpci/model/SettingRepository.php:22
-/home/khada/src/phpci/Tests/SettingRepositoryTest.php:48
-
-3) SettingTest::testAddSetting
-PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "settings" does not exist
-LINE 1: SELECT value FROM settings WHERE name = $1
-                          ^
-
-/home/khada/src/phpci/model/SettingRepository.php:9
-/home/khada/src/phpci/model/Setting.php:21
-/home/khada/src/phpci/Tests/SettingTest.php:37
-
-4) UserSQLRepositoryTest::testAddAdminUser
-PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  table "users" does not exist
-
-/home/khada/src/phpci/Tests/UserSQLRepositoryTest.php:39
+/home/khada/src/phpci/model/UserSQLRepository.php:55
+/home/khada/src/phpci/Tests/UserSQLRepositoryTest.php:55
 
 ERRORS!
-Tests: 6, Assertions: 17, Errors: 4.
+Tests: 6, Assertions: 12, Errors: 1.
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-22 04:17:06        [0m
+[1;37;40m  2017-09-22 04:18:08        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.00% (0/699)    [0m
-[37;41m  Methods:  1.18% (47/3981)  [0m
-[37;41m  Lines:    1.08% (393/36441)[0m
-
-@PHP::PHP_Timer
-  [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
-\Co
-
-[1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-22 04:17:06        [0m
-[1;37;40m                             [0m
-[1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.00% (0/700)    [0m
-[37;41m  Methods:  0.95% (38/3996)  [0m
-[37;41m  Lines:    0.69% (292/42465)[0m
+[37;41m  Classes:  0.14% (1/699)    [0m
+[37;41m  Methods:  1.36% (54/3981)  [0m
+[37;41m  Lines:    1.04% (380/36441)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
 \Composer\Autoload::ClassLoader
-  [37;41mMethods:   0.00% ( 0/21)[0m   [37;41mLines:   3.85% (  5/130)[0m
+  [37;41mMethods:   0.00% ( 0/21)[0m   [37;41mLines:  18.46% ( 24/130)[0m
 \PHPUnit\Framework::Assert
   [37;41mMethods:   4.52% ( 7/155)[0m   [37;41mLines:   2.05% ( 18/877)[0m
 \PHPUnit\Framework::TestCase
@@ -82,5 +48,11 @@ Tests: 6, Assertions: 17, Errors: 4.
   [37;41mMethods:   3.23% ( 1/31)[0m   [37;41mLines:  17.61% ( 75/426)[0m
 \SebastianBergmann\CodeCoverage::CodeCoverage
   [37;41mMethods:   0.00% ( 0/38)[0m   [37;41mLines:   0.96% (  4/416)[0m
+\model::Setting
+  [30;43mMethods:  87.50% ( 7/ 8)[0m   [30;43mLines:  66.67% ( 10/ 15)[0m
+\model::SettingRepository
+  [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 20/ 20)[0m
 \model::User
-  [30;43mMethods:  73.91% (17/23)[0m   [30;43mLines:  73.68% ( 28/ 38)[0m
+  [30;43mMethods:  86.96% (20/23)[0m   [30;43mLines:  86.84% ( 33/ 38)[0m
+\model::UserSQLRepository
+  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  50.79% ( 32/ 63)[0m
