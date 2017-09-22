@@ -1,30 +1,30 @@
 PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
-....E.                                                              6 / 6 (100%)
+...E..                                                              6 / 6 (100%)
 
-Time: 4.36 seconds, Memory: 14.00MB
+Time: 4.33 seconds, Memory: 12.00MB
 
 There was 1 error:
 
-1) UserSQLRepositoryTest::testMakeUserAdministrator
+1) UserSQLRepositoryTest::testAddAdminUser
 PDOException: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "users" does not exist
-LINE 1: INSERT INTO users (username, display_name, password, email) ...
-                    ^
+LINE 1: ...ve, is_administrator, is_reporter, is_banned FROM users WHER...
+                                                             ^
 
-/home/khada/src/openroom/model/UserSQLRepository.php:55
-/home/khada/src/openroom/Tests/UserSQLRepositoryTest.php:89
+/home/khada/src/phpci/model/UserSQLRepository.php:11
+/home/khada/src/phpci/Tests/UserSQLRepositoryTest.php:56
 
 ERRORS!
-Tests: 6, Assertions: 18, Errors: 1.
+Tests: 6, Assertions: 12, Errors: 1.
 
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-22 04:21:06        [0m
+[1;37;40m  2017-09-22 04:22:07        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.14% (1/700)    [0m
-[37;41m  Methods:  1.35% (54/3996)  [0m
-[37;41m  Lines:    0.92% (390/42445)[0m
+[37;41m  Classes:  0.14% (1/699)    [0m
+[37;41m  Methods:  1.36% (54/3981)  [0m
+[37;41m  Lines:    1.04% (380/36441)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
@@ -53,9 +53,6 @@ Tests: 6, Assertions: 18, Errors: 1.
 \model::SettingRepository
   [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 20/ 20)[0m
 \model::User
-  [30;43mMethods:  86.96% (20/23)[0m   [30;42mLines:  92.11% ( 35/ 38)[0m
+  [30;43mMethods:  86.96% (20/23)[0m   [30;43mLines:  86.84% ( 33/ 38)[0m
 \model::UserSQLRepository
-  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  63.49% ( 40/ 63)[0m
-s:  69.57% (16/23)[0m   [30;43mLines:  81.58% ( 31/ 38)[0m
-\model::UserSQLRepository
-  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  63.49% ( 40/ 63)[0m
+  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  50.79% ( 32/ 63)[0m
