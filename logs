@@ -1,20 +1,19 @@
 PHPUnit 6.0.13 by Sebastian Bergmann and contributors.
 
-...E..                                                              6 / 6 (100%)
+......                                                              6 / 6 (100%)
 
-Time: 4.35 seconds, Memory: 12.00MB
+Time: 4.41 seconds, Memory: 12.00MB
 
-There was 1 error:
+OK (6 tests, 20 assertions)
 
-1) UserS
 
 [1;37;40mCode Coverage Report:        [0m
-[1;37;40m  2017-09-22 04:19:07        [0m
+[1;37;40m  2017-09-22 04:20:10        [0m
 [1;37;40m                             [0m
 [1;37;40m Summary:                    [0m
-[37;41m  Classes:  0.14% (1/700)    [0m
-[37;41m  Methods:  1.38% (55/3996)  [0m
-[37;41m  Lines:    0.93% (396/42481)[0m
+[37;41m  Classes:  0.14% (1/699)    [0m
+[37;41m  Methods:  1.38% (55/3981)  [0m
+[37;41m  Lines:    1.09% (396/36477)[0m
 
 @PHP::PHP_Timer
   [37;41mMethods:  40.00% ( 2/ 5)[0m   [37;41mLines:  21.43% (  3/ 14)[0m
@@ -46,10 +45,3 @@ There was 1 error:
   [30;43mMethods:  86.96% (20/23)[0m   [30;42mLines:  92.11% ( 35/ 38)[0m
 \model::UserSQLRepository
   [30;43mMethods:  80.00% ( 4/ 5)[0m   [30;43mLines:  73.02% ( 46/ 63)[0m
- [30;43mMethods:  87.50% ( 7/ 8)[0m   [30;43mLines:  66.67% ( 10/ 15)[0m
-\model::SettingRepository
-  [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 20/ 20)[0m
-\model::User
-  [30;43mMethods:  86.96% (20/23)[0m   [30;43mLines:  86.84% ( 33/ 38)[0m
-\model::UserSQLRepository
-  [30;43mMethods:  60.00% ( 3/ 5)[0m   [30;43mLines:  50.79% ( 32/ 63)[0m
